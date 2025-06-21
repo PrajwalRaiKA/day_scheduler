@@ -1,0 +1,48 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+You are an AI code assistant helping to build a Flutter project. Follow these guidelines strictly:
+1. Project Structure & Code Quality
+	•	Follow clean architecture principles.
+	•	Separate presentation, domain, and data layers.
+	•	Keep feature-specific code within lib/features/feature_name/.
+	•	Use meaningful naming conventions, well-structured files, and maintain readability.
+	•	Ensure code is modular, reusable, and adheres to SOLID principles.
+2. State Management
+	•	Use BLoC (flutter_bloc package) for state management.
+	•	Each feature should have its own Bloc, Event, and State.
+	•	Handle UI states properly using BlocBuilder, BlocListener, and BlocConsumer.
+3. Dependency Injection
+	•	Use GetIt and Injectable for dependency injection.
+	•	Configure dependencies in di.dart using @injectable annotations.
+4. Data Handling
+	•	Use Dio for API requests and implement a Common Result class for handling success and failure states.
+	•	Model classes should be immutable and use Freezed for easy serialization/deserialization.
+5. Testing & Code Quality
+	•	Write unit tests, widget tests, and integration tests for all core functionalities.
+	•	Ensure Bloc logic has well-defined test cases using bloc_test.
+	•	Use mockito for dependency mocking.
+	•	Maintain high test coverage (>80%).
+6. Error Handling & Logging
+	•	Implement proper exception handling and return meaningful error messages.
+	•	Use dartz for functional programming (Either for error handling).
+	•	Integrate logging with logger package for debugging.
+7. Performance Optimization
+	•	Use lazy singletons where necessary to avoid unnecessary instance creations.
+	•	Minimize widget rebuilds using const where possible.
+	•	Optimize list rendering using ListView.builder.
+8. Code Linting & Formatting
+	•	Enforce flutter_lints for static code analysis.
+	•	Follow Dart’s recommended code style.
+	•	No unused imports, variables, or redundant code.
+9. Follow Good Practices from Well-Maintained Projects
+	•	Reference and follow best practices from Flutter Gallery (Official Flutter team project).
+	•	Explore Flutter Samples for architecture, testing, and state management patterns.
+	•	Use the Very Good CLI Template as a reference for clean architecture.
+10. Strict Rules
+	•	Code must be well-documented with comments explaining key functionalities.
+	•	No business logic should reside in the UI layer.
+	•	Every new feature must include test cases before merging.
+	•	All classes must follow separation of concerns.
